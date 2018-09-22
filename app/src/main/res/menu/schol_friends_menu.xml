@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/add_new_friends"
+        android:title="Add New Member"/>
+    <item
+        android:id="@+id/group_call"
+        android:title="Group Call" />
+
+    <item
+        android:id="@+id/group_email"
+        android:title="Group Email" />
+    <item
+        android:id="@+id/group_sms"
+        android:title="Group Sms" />
+</menu>

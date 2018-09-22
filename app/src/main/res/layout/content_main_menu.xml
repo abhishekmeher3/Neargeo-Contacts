@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".activity.MainMenuActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Menu"
+                    android:fontFamily="@font/century_gothic"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Jakub Antalík"
+                android:textColor="#676767"
+                android:fontFamily="@font/century_gothic"
+
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="+91 98520 65874"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#676767"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_number"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/free_drawable"
+                android:padding="3dp"
+                android:fontFamily="@font/century_gothic"
+                android:text="Free"
+                android:textAlignment="center"
+                android:textColor="#676767" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/change_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dedede"
+            app:layout_constraintTop_toBottomOf="@+id/details_layout">
+
+            <TextView
+                android:id="@+id/edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Edit Profile"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/edit_profile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_one"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Change Password"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view_one"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/subscriptions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fbb655"
+            app:layout_constraintTop_toBottomOf="@+id/change_events">
+
+            <TextView
+                android:id="@+id/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Buy Subscription"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp"
+                android:textColor="#3a3b3c" />
+
+            <TextView
+                android:id="@+id/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_text"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/century_gothic"
+                android:text="Add Unlimited Contacts and much more"
+                android:textColor="#676767"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#dedede"
+            app:layout_constraintTop_toBottomOf="@+id/subscriptions_layout">
+
+            <TextView
+                android:id="@+id/shared_with"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Contacts shared with me"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+            <View
+                android:id="@+id/view_two"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/shared_with"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/print_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_two"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Print Contacts"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view_two"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/backup_restore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintTop_toBottomOf="@+id/layout_contact">
+
+            <TextView
+                android:id="@+id/backup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Backup and Restore"
+                android:textColor="#3a3b3c"
+                android:textStyle="italic"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/backup_restore_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#dedede"
+
+            app:layout_constraintTop_toBottomOf="@+id/backup_restore">
+
+            <TextView
+                android:id="@+id/back_up_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Backup all Contacts Data"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+            <View
+                android:id="@+id/view_three"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/back_up_all"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/restore_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_three"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Restore all Contacts Data"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view_three"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/near_geo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintTop_toBottomOf="@+id/backup_restore_layout">
+
+            <TextView
+                android:id="@+id/near_geo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Near Geo Contacts"
+                android:textColor="#3a3b3c"
+                android:textStyle="italic"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_near_geo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#dedede"
+            app:layout_constraintTop_toBottomOf="@+id/near_geo">
+
+            <TextView
+                android:id="@+id/shared"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Share"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+            <View
+                android:id="@+id/view_four"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/shared"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/contact_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_four"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Contact Us"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view_four"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+            <View
+                android:id="@+id/view_five"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/contact_us"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_five"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Help and FAQ"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view_five"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+
+
+            <View
+                android:id="@+id/view_six"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/faq"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:background="#838086" />
+
+            <TextView
+                android:id="@+id/ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/faq"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Ratings"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/faq"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="13dp"
+                android:padding="10dp"
+                android:src="@mipmap/arrow_copy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#dedede"
+            app:layout_constraintTop_toBottomOf="@+id/layout_near_geo">
+
+            <TextView
+                android:id="@+id/sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Signout"
+                android:fontFamily="@font/century_gothic"
+                android:textColor="#3a3b3c"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintTop_toBottomOf="@+id/signout_layout">
+
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/company"
+                android:textAlignment="center"
+                android:textColor="#3a3b3c"
+                android:fontFamily="@font/century_gothic"
+                android:textSize="17dp" />
+
+
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

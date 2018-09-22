@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ngc</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="company">© 2018 NGC, product of Himaja InfoTech \n Version 3.0   \n Designed and Developed by Divyani Bhuwalka </string>
+</resources>

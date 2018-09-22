@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/century_gothic"
+                android:text="Find Contacts Nearby"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/ic_filter_list_black_24dp" />
+
+            <ImageView
+                android:id="@+id/add_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-27dp"
+        android:src="@mipmap/dial_pad_copy_3"
+        app:backgroundTint="@color/yellow" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabs"
+        android:layout_below="@+id/tolbar"
+        android:background="@color/cardview_dark_background" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#3a3b3c"
+        app:tabTextColor="#676767" />
+
+
+    <LinearLayout
+        android:id="@+id/dial_pad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/above_shadow" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="#919191" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#f8f8f8">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/century_gothic"
+                android:paddingRight="20dp"
+                android:text="123456"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:padding="22dp"
+                android:layout_marginRight="16dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:src="@mipmap/call_black"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="#919191" />
+
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#f8f8f8" />
+
+    </LinearLayout>
+
+</RelativeLayout>

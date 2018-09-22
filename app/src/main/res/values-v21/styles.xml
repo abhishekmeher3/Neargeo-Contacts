@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="popupMenuStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:itemBackground">@color/text_colour</item>
+        <item name="android:fontFamily">@font/century_gothic</item>
+    </style>
+
+</resources>

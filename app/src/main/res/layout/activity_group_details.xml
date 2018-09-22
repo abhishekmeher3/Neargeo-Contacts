@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".fragments.AllFriendsFragment">
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School Friends"
+                android:textSize="18dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/total_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 members"
+                android:layout_below="@+id/title"
+                android:textColor="#ffffff"/>
+
+            <ImageView
+                android:id="@+id/context_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:src="@mipmap/menu_copy"/>
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/context_menu"
+                android:src="@mipmap/delete_copy"/>
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_toLeftOf="@+id/delete"
+                android:src="@mipmap/edit"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_toLeftOf="@+id/filter_select"
+            android:background="@drawable/curve_grey_border_background"
+            android:hint="Search Contact, Group, Favourites"
+            android:paddingLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/filter_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="22dp"
+            android:layout_below="@+id/toolbar"
+            app:srcCompat="@drawable/ic_filter_list_black_24dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/groups_details_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

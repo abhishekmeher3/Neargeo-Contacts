@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/change_colour"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/fav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/fav_copy_2"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="Adam N Mathew" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="Professor" />
+
+    <TextView
+        android:id="@+id/phnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profession"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="+1-202-555-014" />
+
+    <ImageView
+        android:id="@+id/km_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_border"
+        android:padding="7dp"
+        android:src="@mipmap/directions" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/km_icon"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:text="0.5km" />
+
+    <ImageView
+        android:id="@+id/call_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/km_icon"
+        android:background="@drawable/rectangle_border"
+        android:padding="7dp"
+        android:src="@mipmap/call" />
+
+    <TextView
+        android:id="@+id/call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/call_icon"
+        android:layout_marginRight="63dp"
+        android:layout_marginTop="4dp"
+        android:text="call" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:background="#8a8a8a" />
+
+</RelativeLayout>

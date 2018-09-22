@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".activity.CreateNewContactActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:theme="@style/AppTheme"
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create New Contact"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp"/>
+
+                </RelativeLayout>
+
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <RelativeLayout
+                android:id="@+id/text_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/add_images"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/circle_drawable"
+
+                    />
+
+                <TextView
+                    android:layout_width="39dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Add Photo"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="23dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:singleLine="true"
+                        android:text="Abhishek"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_name"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/get_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:singleLine="true"
+                        android:text="Abhishek"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_last_name"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Professional Details"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/designations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_check"
+                android:background="#f7f7f7">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/get_designtions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Designation"
+                        android:singleLine="true"
+                        android:text="Android Developer"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_designation"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="7dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/get_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Department"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_department"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="7dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/get_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Company"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/addPhone_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/designations">
+
+                <ImageView
+                    android:id="@+id/call_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:src="@mipmap/call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/call_icon"
+                    android:text="Add Phone"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/designations"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/yellow"
+                app:fabCustomSize="45dp" />
+
+            <RelativeLayout
+                android:id="@+id/click_add_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addPhone_title"
+                android:background="#f7f7f7">
+
+
+                <TextView
+                    android:id="@+id/input_home_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Home"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/input_home_phone"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+
+                <EditText
+                    android:id="@+id/get_home_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_home_phone"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="7dp"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:singleLine="true"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:text="212312313212313213"
+                    android:textColor="#3a3b3c" />
+
+
+                <TextView
+                    android:id="@+id/input_personal_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_home_number"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Personal"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_home_number"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/input_personal_phone"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                <EditText
+                    android:id="@+id/get_personal_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_personal_phone"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:hint="+91 65820 51650"
+                    android:singleLine="true"
+                    android:textColor="#3a3b3c"
+                    android:backgroundTint="@color/edit_text_line"
+
+                    android:textColorHint="@color/colorPrimary" />
+
+
+
+                    <TextView
+                        android:id="@+id/input_choose_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/get_personal_number"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Choose Label"
+                        android:textColor="@color/colorPrimary" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/get_personal_number"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/input_personal_phone"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+                    <EditText
+                        android:id="@+id/get_choose_lable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/input_choose_lable"
+                        android:text="Choose Label"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="20dp"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:drawableRight="@mipmap/delete_copy_black"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/addEmail_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/click_add_phone">
+
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:src="@mipmap/email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/email_icon"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Add Email"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/click_add_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addEmail_title"
+                android:background="#f7f7f7">
+
+
+
+                    <TextView
+                        android:id="@+id/input_add_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Personal"
+                        android:textColor="@color/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/get_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="balkanizotov@mail.com"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="20dp"
+                        android:drawableRight="@mipmap/delete_copy_black"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:layout_below="@+id/input_add_email"/>
+            </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/click_add_phone"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/yellow"
+                app:fabCustomSize="45dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/addAddress_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/click_add_email">
+
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:src="@mipmap/directions_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/address_icon"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Add Addres"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/click_add_email"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/yellow"
+                app:fabCustomSize="45dp" />
+
+            <RelativeLayout
+                android:id="@+id/add_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addAddress_title"
+                android:background="#f7f7f7">
+
+                <TextView
+                    android:id="@+id/home_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Home"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:id="@+id/get_address_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_text"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="Address line 1"
+                    android:singleLine="true"
+
+                    android:textColor="#3a3b3c"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:textColorHint="#3a3b3c" />
+
+                <EditText
+                    android:id="@+id/get_address_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_address_one"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="Address line 2"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:singleLine="true"
+                    android:textColor="#3a3b3c"
+                    android:textColorHint="#3a3b3c" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_address_two"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/get_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/century_gothic"
+                        android:hint="City"
+                        android:singleLine="true"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="#3a3b3c" />
+
+                    <EditText
+                        android:id="@+id/get_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/century_gothic"
+                        android:hint="State"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="#3a3b3c" />
+
+                    <EditText
+                        android:id="@+id/get_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/century_gothic"
+                        android:hint="Pincode"
+                        android:backgroundTint="@color/edit_text_line"
+                        android:singleLine="true"
+                        android:textColor="#3a3b3c"
+                        android:textColorHint="#3a3b3c" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_event"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/add_address">
+
+                <ImageView
+                    android:id="@+id/event_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:src="@mipmap/birthday" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/event_icon"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Add Event"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/add_address"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/yellow"
+                app:fabCustomSize="45dp" />
+
+            <RelativeLayout
+                android:id="@+id/event_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_event"
+                android:layout_marginBottom="10dp"
+                android:background="#f7f7f7">
+
+                <TextView
+                    android:id="@+id/event_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Anniversary"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:id="@+id/add_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/event_text"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="Add Date"
+                    android:layout_marginRight="15dp"
+                    android:singleLine="true"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:textColor="#3a3b3c"
+                    android:textColorHint="#3a3b3c" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_notes"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/event_details">
+
+                <ImageView
+                    android:id="@+id/event_icon_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:src="@mipmap/notes" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/event_icon_notes"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Add Notes"
+                    android:textColor="@color/text_colour"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/event_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_notes"
+                android:layout_marginBottom="10dp"
+                android:background="#f7f7f7">
+
+                <TextView
+                    android:id="@+id/event_notes_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Anniversary"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:id="@+id/add_notes_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/event_notes_text"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:fontFamily="@font/century_gothic"
+                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:hint="Add Notes here"
+                    android:singleLine="true"
+                    android:textColor="#3a3b3c"
+                    android:textColorHint="#3a3b3c" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

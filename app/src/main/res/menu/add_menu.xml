@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_new"
+        android:icon="@mipmap/add_new_contact"
+        android:title="Add New Contact"
+        />
+    <item
+        android:id="@+id/new_group"
+        android:icon="@mipmap/create_group"
+        android:title="Create New Group"
+    />
+
+</menu>
