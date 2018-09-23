@@ -43,6 +43,7 @@
             android:textColorHint="#b33a3b3c"
             android:layout_toLeftOf="@+id/filter"
             android:layout_marginRight="20dp"
+            android:textSize="14sp"
             android:background="@drawable/curve_grey_border_background"
             android:hint="Search Contact, Group, Favourites  "
             android:paddingLeft="15dp" />

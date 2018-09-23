@@ -19,6 +19,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="15dp"
+            android:textSize="14sp"
             android:layout_toLeftOf="@+id/filter_select"
             android:background="@drawable/curve_grey_border_background"
             android:hint="Search Contact, Group, Favourites"

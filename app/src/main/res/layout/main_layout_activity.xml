@@ -70,7 +70,7 @@
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         app:tabIndicatorColor="@color/colorPrimary"
-        app:tabIndicatorHeight="4dp"
+        app:tabIndicatorHeight="2dp"
         app:tabMode="fixed"
         app:tabSelectedTextColor="#3a3b3c"
         app:tabTextColor="#676767" />
