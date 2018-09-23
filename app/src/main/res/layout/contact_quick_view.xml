@@ -1,168 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/details_background">
 
 
+    <ImageView
+        android:id="@+id/images_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/images_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Adam N Mathew"
+        android:textColor="#3a3b3c"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/job_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Professor"
+        android:textColor="#676767"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/address_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/job_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Osmania University, Hyderabad"
+        android:textColor="#676767"
+        android:textSize="17dp" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/address_user"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="4">
 
-
-
-
-
-
-        <ImageView
-            android:id="@+id/images_user"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_round"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/name_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Adam N Mathew"
-            android:layout_below="@+id/images_user"
-            android:textSize="17dp"
-            android:textColor="#3a3b3c"
-            android:fontFamily="@font/century_gothic"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/call" />
 
-        <TextView
-            android:id="@+id/job_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Professor"
-            android:layout_below="@+id/name_user"
-            android:textSize="17dp"
-            android:textColor="#676767"
-            android:fontFamily="@font/century_gothic"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/call"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/verdana"
+                android:text="call"
+                android:textColor="#676767"
+                android:textSize="17dp" />
 
-        <TextView
-            android:id="@+id/address_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Osmania University, Hyderabad"
-            android:layout_below="@+id/job_user"
-            android:textSize="17dp"
-            android:textColor="#676767"
-            android:fontFamily="@font/century_gothic"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"/>
+        </RelativeLayout>
 
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:weightSum="4"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/address_user">
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/call"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/call"
-                    android:layout_centerInParent="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="call"
-                    android:textSize="17dp"
-                    android:layout_below="@+id/call"
-                    android:layout_marginTop="7dp"
-                    android:textColor="#676767"
-                    android:fontFamily="@font/verdana"
-                    android:layout_centerHorizontal="true"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/message" />
 
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/message"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/message"
-                    android:layout_centerInParent="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Message"
-                    android:textSize="17dp"
-                    android:layout_below="@+id/message"
-                    android:layout_marginTop="7dp"
-                    android:textColor="#676767"
-                    android:fontFamily="@font/verdana"
-                    android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/verdana"
+                android:text="Message"
+                android:textColor="#676767"
+                android:textSize="17dp" />
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/distance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/call"
-                    android:layout_centerInParent="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0.5kms"
-                    android:textSize="17dp"
-                    android:fontFamily="@font/verdana"
-                    android:layout_below="@+id/distance"
-                    android:layout_marginTop="7dp"
-                    android:textColor="#676767"
-                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/view_details"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/info"
-                    android:layout_centerInParent="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Details"
-                    android:textSize="17dp"
-                    android:layout_below="@+id/info"
-                    android:layout_marginTop="7dp"
-                    android:textColor="#676767"
-                    android:fontFamily="@font/verdana"
-                    android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/distance"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/verdana"
+                android:text="0.5kms"
+                android:textColor="#676767"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/verdana"
+                android:text="Details"
+                android:textColor="#676767"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
 
 
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
 
 

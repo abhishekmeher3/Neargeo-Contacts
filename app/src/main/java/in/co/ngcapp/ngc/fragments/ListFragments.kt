@@ -25,6 +25,12 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
     var fav_contact :TextView?= null
+    var titleTextView: TextView? = null
+    var countTextView: TextView? = null
+
+    var titles = arrayOf("Your Contacts", "Your groups", "Your favorites")
+    var counts = arrayOf("265 total contacts", "26 total groups", "5 favorite contacts")
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view = inflater.inflate(R.layout.activity_tab_layout, container, false)
@@ -33,7 +39,8 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
         tabLayout = view.findViewById(R.id.tabs)
         setPage()
         viewPager = view.findViewById(R.id.viewpager) as ViewPager
-        fav_contact = view.findViewById(R.id.fav_contact)
+        titleTextView = view.findViewById(R.id.title)
+        countTextView = view.findViewById(R.id.count)
 
         val adapter = ViewPagerAdapter(fragmentManager, tabLayout!!.getTabCount())
         viewPager!!.adapter = adapter
@@ -41,6 +48,8 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
         tabLayout!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
+                titleTextView!!.text = titles[tab.position]
+                countTextView!!.text = counts[tab.position]
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
@@ -51,6 +60,8 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
 
             }
         })
+        titleTextView!!.text = titles[0]
+        countTextView!!.text = counts[0]
         return view
     }
 
@@ -63,7 +74,6 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
     }
 
     override fun onFragmentInteraction(title: String) {
-        fav_contact!!.setText(title)
     }
 
 
