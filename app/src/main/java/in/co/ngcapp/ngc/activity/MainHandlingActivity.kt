@@ -90,10 +90,9 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
 
     fun setPage() {
-        tabs!!.addTab(tabs!!.newTab().setText("Map"))
-
-        tabs!!.addTab(tabs!!.newTab().setText("List"))
-        tabs!!.tabGravity = TabLayout.GRAVITY_FILL;
+        tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_map))
+        tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_list))
+        tabs!!.tabGravity = TabLayout.GRAVITY_FILL
     }
 
     //Return current fragment on basis of Position
