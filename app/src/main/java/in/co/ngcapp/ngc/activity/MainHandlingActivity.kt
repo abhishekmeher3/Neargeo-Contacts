@@ -31,14 +31,8 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
     var mThumbIds = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#")
     var dailpadTexts = arrayOf("ABC", "DEF", "EFG", "IJK", "LMN", "OPQ", "RST", "UVW", "XYZ", "", "+", "")
-//
-//    var map_text: TextView? = null
-//    var text_list: TextView? = null
-//    var maps_icon: ImageView? = null
-//    var maps_lists: ImageView? = null
-//    var list_click: RelativeLayout? = null
-//    var map_click: RelativeLayout? = null
-//    var container: FrameLayout? = null
+
+
 
     var toolbar: Toolbar? = null
     var tabs: TabLayout? = null
@@ -54,7 +48,6 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout_activity)
-        // toolbar = findViewById(R.id.toolbar) as Toolbar
 
         tabs = findViewById(R.id.tabs)
         viewPager = findViewById(R.id.viewPager) as ViewPager
@@ -73,9 +66,6 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         tabs!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
-
-
-
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {

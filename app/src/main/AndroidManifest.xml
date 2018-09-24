@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainHandlingActivity">
+        <activity android:name=".activity.LoginActivity">
+
+            <!-- <activity android:name=".activity.MainHandlingActivity"> -->
+
 
             <!-- <activity -->
             <!-- android:name=".activity.MainMenuActivity"> -->
@@ -28,7 +31,11 @@
             android:theme="@style/BaseTheme" />
         <activity android:name=".activity.CreateNewContactActivity" />
         <activity android:name=".activity.MainMenuActivity" />
-        <activity android:name=".activity.CreateNewGroupActivity"></activity>
+        <activity android:name=".activity.CreateNewGroupActivity" />
+        <!-- <activity android:name=".activity.LoginActivity"></activity> -->
+        <activity android:name=".activity.WalkThroughActivity"></activity>
+        <activity android:name=".activity.MainHandlingActivity"> </activity>
+
     </application>
 
 </manifest>
