@@ -11,7 +11,7 @@
         android:layout_marginLeft="50dp">
 
         <ImageView
-            android:id="@+id/maps_lists"
+            android:id="@+id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -19,11 +19,11 @@
             app:srcCompat="@drawable/ic_format_list_bulleted_black_24dp" />
 
         <TextView
-            android:id="@+id/text_list"
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/maps_lists"
+            android:layout_toRightOf="@+id/icon"
             android:fontFamily="@font/calibri"
             android:text="Lists"
             android:textColor="#3a3b3c"

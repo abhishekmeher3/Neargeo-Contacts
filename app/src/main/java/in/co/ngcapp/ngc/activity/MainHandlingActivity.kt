@@ -14,6 +14,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.opengl.Visibility
+import android.os.Build
 import android.os.Handler
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
@@ -73,13 +74,11 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         tabs!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
-
-
-
+                addTabTint(tab)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
-
+                removeTabTint(tab)
             }
 
             override fun onTabReselected(tab: TabLayout.Tab) {
@@ -94,6 +93,27 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_map))
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_list))
         tabs!!.tabGravity = TabLayout.GRAVITY_FILL
+        addTabTint(tabs!!.getTabAt(0)!!)
+    }
+
+    private fun addTabTint(toTab: TabLayout.Tab){
+        val tintColor: Int = resources.getColor(R.color.colorPrimary)
+        colorTabView(toTab.customView!!, tintColor)
+    }
+
+    private fun removeTabTint(toTab: TabLayout.Tab){
+        val tintColor: Int = resources.getColor(R.color.black)
+        colorTabView(toTab.customView!!, tintColor)
+    }
+
+    private fun colorTabView(view: View, toColor: Int){
+        view.findViewById<TextView>(R.id.text)
+                .setTextColor(toColor)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.findViewById<ImageView>(R.id.icon)
+                    .drawable
+                    .setTint(toColor)
+        }
     }
 
     //Return current fragment on basis of Position
