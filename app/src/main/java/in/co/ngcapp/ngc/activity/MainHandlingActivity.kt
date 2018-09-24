@@ -10,9 +10,9 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
-import android.widget.ImageView
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.opengl.Visibility
 import android.os.Handler
 import android.support.design.widget.FloatingActionButton
@@ -22,11 +22,9 @@ import android.support.v7.view.menu.MenuPopupHelper
 import android.support.v7.widget.PopupMenu
 import android.view.ContextThemeWrapper
 import android.view.animation.Animation
-import android.widget.GridView
-import android.widget.RelativeLayout
 import android.view.animation.AnimationUtils
 import android.view.animation.TranslateAnimation
-import android.widget.LinearLayout
+import android.widget.*
 
 
 class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
@@ -68,13 +66,16 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         setPage()
         var dialPadAdapter = DialPadAdapter(this@MainHandlingActivity, mThumbIds, dailpadTexts)
         grid_view!!.adapter = dialPadAdapter
-        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount())
+        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount(),this@MainHandlingActivity)
         viewPager!!.adapter = adapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
         tabs!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
+
+
+
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {

@@ -72,8 +72,8 @@
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="2dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="#3a3b3c"
-        app:tabTextColor="#676767" />
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#3a3b3c" />
 
 
     <LinearLayout

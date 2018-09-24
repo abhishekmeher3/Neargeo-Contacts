@@ -15,31 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f94af5-8cfa-46ae-b774-7a2d5d702ef1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_close.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_copy.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_delete_white.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_dial_pad_backspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_filter.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_filter_black.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_hamburger.xml" />
-      <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/fragments/AllFriendsFragment.kt" afterPath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/fragments/AllFriendsFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/views/Toolbar_ActionMode_Callback.kt" afterPath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/views/Toolbar_ActionMode_Callback.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_create_new_contact.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_create_new_contact.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_group_details.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_group_details.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/contact_quick_view.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/contact_quick_view.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/dial_adpter.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/dial_adpter.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_all_friends.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_all_friends.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_favrouite.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_favrouite.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_group.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_group.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_map.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_map.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt" afterPath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt" afterPath="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/bottom_to_chose.xml" afterPath="$PROJECT_DIR$/src/main/res/menu/bottom_to_chose.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,11 +34,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CreateNewContactActivity.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/CreateNewContactActivity.kt">
+      <file leaf-file-name="MainHandlingActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="94">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewPagerAdapterTwo.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+              <folding>
+                <element signature="e#37#417#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_layout_activity.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -2201,10 +2205,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/res/drawable/ic_hamburger.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/res/drawable/ic_dial_pad_backspace.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/dial_adpter.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_map.xml" />
         <option value="$PROJECT_DIR$/src/main/res/drawable/ic_filter.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_all_friends.xml" />
@@ -2221,6 +2223,9 @@
         <option value="$PROJECT_DIR$/src/main/res/drawable/ic_close.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/contact_quick_view.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_create_new_contact.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt" />
       </list>
     </option>
   </component>
@@ -2520,7 +2525,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30350193" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30285344" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2529,7 +2534,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27237353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2573,40 +2578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design/27.1.1/6e10c7f954f63690f7846fb22352375cf1b9fbb4/design-27.1.1-sources.jar!/android/support/design/widget/TabLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1324" column="19" lean-forward="false" selection-start-line="1324" selection-start-column="19" selection-end-line="1324" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/tab_map.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/DialPadAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -2713,22 +2688,6 @@
             <element signature="e#43747#43748#0" expanded="false" />
             <element signature="e#43791#43792#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2934,9 +2893,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/CreateNewContactActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="264">
+          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design/27.1.1/6e10c7f954f63690f7846fb22352375cf1b9fbb4/design-27.1.1-sources.jar!/android/support/design/widget/TabLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1324" column="19" lean-forward="false" selection-start-line="1324" selection-start-column="19" selection-end-line="1324" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/main_layout_activity.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/tab_map.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/activity/MainHandlingActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/co/ngcapp/ngc/adapters/ViewPagerAdapterTwo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#37#417#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
