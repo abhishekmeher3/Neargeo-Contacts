@@ -17,7 +17,7 @@
             android:id="@+id/filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_filter_list_black_24dp"
+            app:srcCompat="@drawable/ic_filter"
             android:layout_marginTop="28dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="25dp" />

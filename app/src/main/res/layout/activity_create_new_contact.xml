@@ -682,6 +682,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:text="Anniversary"
+                    android:visibility="gone"
                     android:textColor="@color/colorPrimary" />
 
                 <EditText

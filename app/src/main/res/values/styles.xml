@@ -63,6 +63,7 @@
     <style name="Actionmode" parent="Base.Widget.AppCompat.ActionMode">
         <item name="titleTextStyle">@style/ActionmodeText</item>
         <item name="subtitleTextStyle">@style/ActionmodeText</item>
+        <item name="android:textSize">14dp</item>
     </style>
 
     <style name="ActionmodeText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">

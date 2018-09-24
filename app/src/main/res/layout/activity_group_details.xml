@@ -73,6 +73,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="15dp"
+            android:textSize="15dp"
             android:layout_below="@+id/toolbar"
             android:layout_toLeftOf="@+id/filter_select"
             android:background="@drawable/curve_grey_border_background"
@@ -87,7 +88,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="22dp"
             android:layout_below="@+id/toolbar"
-            app:srcCompat="@drawable/ic_filter_list_black_24dp" />
+            app:srcCompat="@drawable/ic_filter_black" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/groups_details_recycler"

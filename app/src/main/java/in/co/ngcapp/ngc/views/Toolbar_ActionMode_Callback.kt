@@ -34,16 +34,16 @@ class Toolbar_ActionMode_Callback (var mContext:Context) : ActionMode.Callback{
     }
 
     override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-        mode!!.getMenuInflater().inflate(R.menu.bottom_to_chose, menu);//Inflate the menu over action mode
+        mode!!.getMenuInflater().inflate(R.menu.bottom_to_chose, menu)//Inflate the menu over action mode
         return true;    }
 
     override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
         if (Build.VERSION.SDK_INT < 11) {
-            MenuItemCompat.setShowAsAction(menu!!.findItem(R.id.delete_copy), MenuItemCompat.SHOW_AS_ACTION_NEVER);
-            MenuItemCompat.setShowAsAction(menu.findItem(R.id.delete), MenuItemCompat.SHOW_AS_ACTION_NEVER);
+            MenuItemCompat.setShowAsAction(menu!!.findItem(R.id.delete_copy), MenuItemCompat.SHOW_AS_ACTION_NEVER)
+            MenuItemCompat.setShowAsAction(menu.findItem(R.id.delete), MenuItemCompat.SHOW_AS_ACTION_NEVER)
         } else {
-            menu!!.findItem(R.id.delete_copy).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            menu!!.findItem(R.id.delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu!!.findItem(R.id.delete_copy).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+            menu!!.findItem(R.id.delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
         }
 
         return true;    }

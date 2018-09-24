@@ -56,7 +56,7 @@ class AllFriendsFragment : Fragment() {
         alphabets!!.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
 
         if (mListener != null){
-            mListener.onFragmentInteraction("256contacts")
+            mListener.onFragmentInteraction("276contacts")
         }
         addData()
         getAlphabets()
@@ -135,7 +135,6 @@ class AllFriendsFragment : Fragment() {
             actionMode!!.title = "$count Contacts Selected"
 
         }
-
     }
 
     interface OnFragmentInteractionListener {
