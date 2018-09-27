@@ -10,13 +10,13 @@
         android:layout_height="200dp"
         android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/print"/>
+        android:src="@mipmap/scan"/>
 
     <TextView
         android:id="@+id/print_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Print"
+        android:text="Scan"
         android:textSize="19dp"
         android:layout_below="@+id/logo_one"
         android:layout_centerHorizontal="true"
@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers."
-        android:textSize="16dp"
         android:textAlignment="center"
         android:layout_below="@+id/print_text"
         android:layout_marginLeft="10dp"

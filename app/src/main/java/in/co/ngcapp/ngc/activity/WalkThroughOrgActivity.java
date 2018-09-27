@@ -47,9 +47,9 @@ public class WalkThroughOrgActivity extends AppCompatActivity {
 
         layouts = new int[]{
                 R.layout.welcome_two,
-                R.layout.welcome_two,
-                R.layout.welcome_two,
-                R.layout.welcome_two};
+                R.layout.welcome_three,
+                R.layout.welcome_four,
+                R.layout.welcome_five};
         addBottomDots(0);
         changeStatusBarColor();
 

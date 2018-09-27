@@ -34,7 +34,6 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var dailpadTexts = arrayOf("ABC", "DEF", "EFG", "IJK", "LMN", "OPQ", "RST", "UVW", "XYZ", "", "+", "")
 
 
-
     var toolbar: Toolbar? = null
     var tabs: TabLayout? = null
     var viewPager: ViewPager? = null
@@ -44,6 +43,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var grid_view: GridView? = null
     var dial_pad: LinearLayout? = null
     var isWhite = true
+    var my_account: ImageView? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,11 +56,13 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         dial = findViewById(R.id.dial)
         dial_pad = findViewById(R.id.dial_pad)
         grid_view = this.findViewById(R.id.grid_view)
+        my_account = findViewById(R.id.my_account)
         dial!!.setOnClickListener(this)
+        my_account!!.setOnClickListener(this)
         setPage()
         var dialPadAdapter = DialPadAdapter(this@MainHandlingActivity, mThumbIds, dailpadTexts)
         grid_view!!.adapter = dialPadAdapter
-        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount(),this@MainHandlingActivity)
+        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount(), this@MainHandlingActivity)
         viewPager!!.adapter = adapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
@@ -89,17 +91,17 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         addTabTint(tabs!!.getTabAt(0)!!)
     }
 
-    private fun addTabTint(toTab: TabLayout.Tab){
+    private fun addTabTint(toTab: TabLayout.Tab) {
         val tintColor: Int = resources.getColor(R.color.colorPrimary)
         colorTabView(toTab.customView!!, tintColor)
     }
 
-    private fun removeTabTint(toTab: TabLayout.Tab){
+    private fun removeTabTint(toTab: TabLayout.Tab) {
         val tintColor: Int = resources.getColor(R.color.black)
         colorTabView(toTab.customView!!, tintColor)
     }
 
-    private fun colorTabView(view: View, toColor: Int){
+    private fun colorTabView(view: View, toColor: Int) {
         view.findViewById<TextView>(R.id.text)
                 .setTextColor(toColor)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -139,6 +141,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
                 menuHelper.show()
             }
             R.id.dial -> openDialPad()
+            R.id.my_account -> startActivity(Intent(this@MainHandlingActivity, MainMenuActivity::class.java))
 
         }
     }
