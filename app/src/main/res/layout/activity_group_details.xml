@@ -49,8 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginRight="10dp"
+                android:padding="10dp"
                 android:layout_toLeftOf="@+id/context_menu"
-                android:src="@mipmap/delete_copy"/>
+                android:src="@drawable/ic_delete"/>
             <ImageView
                 android:id="@+id/edit"
                 android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
                 android:layout_marginRight="10dp"
                 android:padding="10dp"
                 android:layout_toLeftOf="@+id/delete"
-                android:src="@mipmap/edit"/>
+                android:src="@drawable/ic_edit"/>
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>

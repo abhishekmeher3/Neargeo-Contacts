@@ -163,7 +163,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
         handler.postDelayed({
             if (isWhite) {
-                dial!!.setImageDrawable(resources.getDrawable(R.mipmap.call))
+                dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
                 isWhite = false
             } else {
                 dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))

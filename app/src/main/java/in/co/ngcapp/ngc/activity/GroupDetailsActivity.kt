@@ -34,7 +34,7 @@ class GroupDetailsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
-        groups_details_recycler!!.layoutManager = LinearLayoutManager(this@GroupDetailsActivity, LinearLayout.VERTICAL, false)
+        groups_details_recycler!!.layoutManager = LinearLayoutManager(this@GroupDetailsActivity, LinearLayout.VERTICAL, false) as RecyclerView.LayoutManager?
         registerForContextMenu(context_menu)
 
         context_menu!!.setOnClickListener {

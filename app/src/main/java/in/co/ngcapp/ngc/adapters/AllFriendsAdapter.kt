@@ -55,21 +55,21 @@ class AllFriendsAdapter(val mContext: Context, var allfriendArrayList: ArrayList
             fav = itemView.findViewById(R.id.fav)
             change_colour!!.setOnClickListener {
 
-                fav!!.visibility = View.VISIBLE
+                //fav!!.visibility = View.VISIBLE
                 change_colour!!.setBackgroundColor(Color.parseColor("#0D97003c"))
 
                 var i = 1
                 clickAllFriends.getCount(i)
 
             }
-//            if (arrayList.mFav == 1) {
-//                fav!!.visibility = View.VISIBLE
+            if (arrayList.mFav == 1) {
+                fav!!.visibility = View.VISIBLE
 //                change_colour!!.setBackgroundColor(Color.parseColor("#0D97003c"))
-//            } else {
-//                fav!!.visibility = View.GONE
+            } else {
+                fav!!.visibility = View.GONE
 //                change_colour!!.setBackgroundColor(Color.parseColor("#ffffff"))
-//
-//            }
+
+            }
         }
 
     }

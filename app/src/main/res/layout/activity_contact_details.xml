@@ -99,7 +99,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginBottom="5dp"
                         android:padding="10dp"
-                        android:src="@mipmap/call" />
+                        android:src="@drawable/ic_call_primary" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginBottom="5dp"
                         android:padding="10dp"
-                        android:src="@mipmap/message" />
+                        android:src="@drawable/ic_message" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,7 +152,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginBottom="5dp"
                         android:padding="10dp"
-                        android:src="@mipmap/fav" />
+                        android:src="@drawable/ic_favourite" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginBottom="5dp"
                         android:padding="10dp"
-                        android:src="@mipmap/directions" />
+                        android:src="@drawable/ic_direction" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -218,7 +218,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
                     android:padding="10dp"
-                    android:src="@mipmap/group" />
+                    android:src="@drawable/ic_group" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -250,7 +250,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/call_black" />
+                    android:src="@drawable/ic_call_black" />
 
                 <TextView
                     android:id="@+id/ph_number"
@@ -280,7 +280,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/message_black" />
+                    android:src="@drawable/ic_message_black" />
 
                 <View
                     android:id="@+id/separator_three"
@@ -330,7 +330,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="11dp"
                     android:padding="10dp"
-                    android:src="@mipmap/message_black" />
+                    android:src="@drawable/ic_message_black" />
 
                 <View
                     android:id="@+id/separator_two"
@@ -359,7 +359,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/call_history" />
+                    android:src="@drawable/ic_call_logs" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -429,7 +429,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/email" />
+                    android:src="@drawable/ic_email_id" />
 
                 <TextView
                     android:id="@+id/email"
@@ -447,7 +447,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
-                    android:src="@mipmap/mail_icon" />
+                    android:src="@drawable/ic_mail" />
 
                 <View
                     android:id="@+id/email_two"
@@ -486,7 +486,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
                     android:padding="10dp"
-                    android:src="@mipmap/directions_black" />
+                    android:src="@drawable/ic_direction_black" />
 
                 <TextView
                     android:id="@+id/address"
@@ -531,7 +531,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/anniversary" />
+                    android:src="@drawable/ic_anniversary" />
 
                 <TextView
                     android:id="@+id/party_text"
@@ -561,7 +561,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/add_to_calendar" />
+                    android:src="@drawable/ic_add_to_calendar" />
 
                 <View
                     android:id="@+id/separator_party"
@@ -592,7 +592,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
-                    android:src="@mipmap/birthday" />
+                    android:src="@drawable/ic_birthday" />
 
                 <TextView
                     android:id="@+id/birthday"
@@ -622,7 +622,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="11dp"
                     android:padding="10dp"
-                    android:src="@mipmap/add_to_calendar" />
+                    android:src="@drawable/ic_add_to_calendar" />
 
                 <View
                     android:id="@+id/party_divider_three"
