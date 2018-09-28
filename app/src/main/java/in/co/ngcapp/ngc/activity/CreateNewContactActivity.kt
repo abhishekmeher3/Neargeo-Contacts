@@ -33,9 +33,9 @@ class CreateNewContactActivity : AppCompatActivity() {
         fab_add_email = findViewById(R.id.fab_add_email)
         addEmail = findViewById(R.id.click_add_email)
         toolbar  = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true);
-        supportActionBar!!.setDisplayShowHomeEnabled(true);
+//        setSupportActionBar(toolbar)
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true);
+//        supportActionBar!!.setDisplayShowHomeEnabled(true);
         fab_add_address = findViewById(R.id.fab_add_address)
         fab_add_events = findViewById(R.id.fab_add_events)
         add_address = findViewById(R.id.add_address)

@@ -10,10 +10,11 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
-import android.widget.ImageView
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.opengl.Visibility
+import android.os.Build
 import android.os.Handler
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
@@ -22,25 +23,16 @@ import android.support.v7.view.menu.MenuPopupHelper
 import android.support.v7.widget.PopupMenu
 import android.view.ContextThemeWrapper
 import android.view.animation.Animation
-import android.widget.GridView
-import android.widget.RelativeLayout
 import android.view.animation.AnimationUtils
 import android.view.animation.TranslateAnimation
-import android.widget.LinearLayout
+import android.widget.*
 
 
 class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
     var mThumbIds = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#")
     var dailpadTexts = arrayOf("ABC", "DEF", "EFG", "IJK", "LMN", "OPQ", "RST", "UVW", "XYZ", "", "+", "")
-//
-//    var map_text: TextView? = null
-//    var text_list: TextView? = null
-//    var maps_icon: ImageView? = null
-//    var maps_lists: ImageView? = null
-//    var list_click: RelativeLayout? = null
-//    var map_click: RelativeLayout? = null
-//    var container: FrameLayout? = null
+
 
     var toolbar: Toolbar? = null
     var tabs: TabLayout? = null
@@ -51,12 +43,12 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var grid_view: GridView? = null
     var dial_pad: LinearLayout? = null
     var isWhite = true
+    var my_account: ImageView? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout_activity)
-        // toolbar = findViewById(R.id.toolbar) as Toolbar
 
         tabs = findViewById(R.id.tabs)
         viewPager = findViewById(R.id.viewPager) as ViewPager
@@ -64,21 +56,24 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         dial = findViewById(R.id.dial)
         dial_pad = findViewById(R.id.dial_pad)
         grid_view = this.findViewById(R.id.grid_view)
+        my_account = findViewById(R.id.my_account)
         dial!!.setOnClickListener(this)
+        my_account!!.setOnClickListener(this)
         setPage()
         var dialPadAdapter = DialPadAdapter(this@MainHandlingActivity, mThumbIds, dailpadTexts)
         grid_view!!.adapter = dialPadAdapter
-        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount())
+        adapter = ViewPagerAdapterTwo(supportFragmentManager, tabs!!.getTabCount(), this@MainHandlingActivity)
         viewPager!!.adapter = adapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
         tabs!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
+                addTabTint(tab)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
-
+                removeTabTint(tab)
             }
 
             override fun onTabReselected(tab: TabLayout.Tab) {
@@ -93,6 +88,27 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_map))
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_list))
         tabs!!.tabGravity = TabLayout.GRAVITY_FILL
+        addTabTint(tabs!!.getTabAt(0)!!)
+    }
+
+    private fun addTabTint(toTab: TabLayout.Tab) {
+        val tintColor: Int = resources.getColor(R.color.colorPrimary)
+        colorTabView(toTab.customView!!, tintColor)
+    }
+
+    private fun removeTabTint(toTab: TabLayout.Tab) {
+        val tintColor: Int = resources.getColor(R.color.black)
+        colorTabView(toTab.customView!!, tintColor)
+    }
+
+    private fun colorTabView(view: View, toColor: Int) {
+        view.findViewById<TextView>(R.id.text)
+                .setTextColor(toColor)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.findViewById<ImageView>(R.id.icon)
+                    .drawable
+                    .setTint(toColor)
+        }
     }
 
     //Return current fragment on basis of Position
@@ -125,6 +141,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
                 menuHelper.show()
             }
             R.id.dial -> openDialPad()
+            R.id.my_account -> startActivity(Intent(this@MainHandlingActivity, MainMenuActivity::class.java))
 
         }
     }
@@ -146,7 +163,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
         handler.postDelayed({
             if (isWhite) {
-                dial!!.setImageDrawable(resources.getDrawable(R.mipmap.call))
+                dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
                 isWhite = false
             } else {
                 dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))

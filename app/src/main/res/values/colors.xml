@@ -9,4 +9,27 @@
     <color name="edit_text_line">#8a8a8a</color>
     <color name="divider_color">#c7c7c7</color>
     <color name="black">#000000</color>
+    <color name="dot_dark_screen1">#c8d3e5</color>
+    <color name="dot_dark_screen2">#c8d3e5</color>
+    <color name="dot_dark_screen3">#c8d3e5</color>
+    <color name="dot_dark_screen4">#c8d3e5</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f4497e</color>
+    <color name="dot_light_screen2">#f4497e</color>
+    <color name="dot_light_screen3">#f4497e</color>
+    <color name="dot_light_screen4">#f4497e</color>
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
 </resources>

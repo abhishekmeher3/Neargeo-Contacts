@@ -1,13 +1,14 @@
 package `in`.co.ngcapp.ngc.adapters
 
 import `in`.co.ngcapp.ngc.fragments.*
+import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import android.support.v4.view.ViewPager
 import android.util.Log
 
-class ViewPagerAdapterTwo (fm: FragmentManager?, var numTabs :Int) : FragmentStatePagerAdapter(fm) {
+
+class ViewPagerAdapterTwo (fm: FragmentManager?, var numTabs :Int ,var mContext:Context) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment? {
         when (position) {
             0 -> {
@@ -30,6 +31,4 @@ class ViewPagerAdapterTwo (fm: FragmentManager?, var numTabs :Int) : FragmentSta
     override fun getCount(): Int {
         return this!!.numTabs!!
     }
-
-
 }

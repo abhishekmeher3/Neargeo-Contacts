@@ -22,6 +22,11 @@
             android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_arrow_back_white" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -31,6 +36,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Create New Contact"
+                        android:layout_marginLeft="15dp"
                         android:textColor="#ffffff"
                         android:textSize="18dp"/>
 
@@ -209,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="35dp"
-                    android:src="@mipmap/call" />
+                    android:src="@drawable/ic_call_primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -270,7 +276,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="7dp"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:singleLine="true"
                     android:backgroundTint="@color/edit_text_line"
                     android:text="212312313212313213"
@@ -303,7 +309,7 @@
                     android:layout_below="@+id/input_personal_phone"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:hint="+91 65820 51650"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"
@@ -341,7 +347,7 @@
                         android:layout_marginLeft="32dp"
                         android:layout_marginRight="20dp"
                         android:backgroundTint="@color/edit_text_line"
-                        android:drawableRight="@mipmap/delete_copy_black"
+                        android:drawableRight="@drawable/ic_delete_black"
                         android:singleLine="true"
                         android:textColor="#3a3b3c" />
 
@@ -360,7 +366,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="35dp"
-                    android:src="@mipmap/email" />
+                    android:src="@drawable/ic_email_id" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -402,7 +408,7 @@
                         android:text="balkanizotov@mail.com"
                         android:layout_marginLeft="32dp"
                         android:layout_marginRight="20dp"
-                        android:drawableRight="@mipmap/delete_copy_black"
+                        android:drawableRight="@drawable/ic_delete_black"
                         android:singleLine="true"
                         android:textColor="#3a3b3c"
                         android:backgroundTint="@color/edit_text_line"
@@ -435,7 +441,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="35dp"
-                    android:src="@mipmap/directions_black" />
+                    android:src="@drawable/ic_direction_black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -487,11 +493,10 @@
                     android:layout_below="@+id/home_text"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Address line 1"
                     android:singleLine="true"
-
                     android:textColor="#3a3b3c"
                     android:backgroundTint="@color/edit_text_line"
                     android:textColorHint="#3a3b3c" />
@@ -504,7 +509,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="5dp"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Address line 2"
                     android:backgroundTint="@color/edit_text_line"
@@ -575,7 +580,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="35dp"
-                    android:src="@mipmap/birthday" />
+                    android:src="@drawable/ic_birthday" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -629,7 +634,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Add Date"
                     android:layout_marginRight="15dp"
@@ -682,6 +687,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:text="Anniversary"
+                    android:visibility="gone"
                     android:textColor="@color/colorPrimary" />
 
                 <EditText
@@ -695,7 +701,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/edit_text_line"
                     android:fontFamily="@font/century_gothic"
-                    android:drawableRight="@mipmap/delete_copy_black"
+                    android:drawableRight="@drawable/ic_delete_black"
                     android:hint="Add Notes here"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"

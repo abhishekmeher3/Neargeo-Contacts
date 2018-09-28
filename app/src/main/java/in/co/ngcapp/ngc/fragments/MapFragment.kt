@@ -40,11 +40,11 @@ class MapFragment : Fragment() {
         return view
     }
 
-    override fun onResume() {
-        super.onResume()
-        activity?.window?.setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
-    }
+//    override fun onResume() {
+//        super.onResume()
+////        activity?.window?.setSoftInputMode(
+////                WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
+//    }
 
     fun getFilterPopup(): PopupWindow {
 

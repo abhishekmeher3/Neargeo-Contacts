@@ -63,6 +63,7 @@
     <style name="Actionmode" parent="Base.Widget.AppCompat.ActionMode">
         <item name="titleTextStyle">@style/ActionmodeText</item>
         <item name="subtitleTextStyle">@style/ActionmodeText</item>
+        <item name="android:textSize">14dp</item>
     </style>
 
     <style name="ActionmodeText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
@@ -71,5 +72,16 @@
 
     <style name="ActionmodeBackButton" parent="Widget.AppCompat.Light.ActionButton.CloseMode">
         <item name="android:tint">@color/white</item>
+    </style>
+
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/text_colour</item>
+        <item name="android:textSize">17sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/text_colour</item>
+        <item name="colorControlNormal">@color/text_colour</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 </resources>

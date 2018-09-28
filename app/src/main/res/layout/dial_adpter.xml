@@ -27,6 +27,7 @@
         android:layout_toRightOf="@+id/number"
         android:layout_alignBaseline="@+id/number"
         android:layout_marginLeft="4dp"
+        android:textColor="#676767"
         android:text="ABC"/>
 
     <View
