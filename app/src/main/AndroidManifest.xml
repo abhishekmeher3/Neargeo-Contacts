@@ -23,7 +23,8 @@
         <activity android:name=".activity.MainMenuActivity" />
         <activity android:name=".activity.CreateNewGroupActivity" />
         <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.MainHandlingActivity"></activity>
+        <activity android:name=".activity.MainHandlingActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
         <activity android:name=".activity.ContactDetailsActivity" />
 
 
