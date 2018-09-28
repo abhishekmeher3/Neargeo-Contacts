@@ -5,4 +5,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main_menu">MainMenuActivity</string>
     <string name="company">© 2018 NGC, product of Himaja InfoTech \n Version 3.0   \n Designed and Developed by Divyani Bhuwalka </string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="print">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
+    <string name="scan">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
+    <string name="connect">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
+    <string name="add">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
 </resources>

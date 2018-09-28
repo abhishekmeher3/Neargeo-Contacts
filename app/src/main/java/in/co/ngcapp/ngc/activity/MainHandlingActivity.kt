@@ -17,7 +17,10 @@ import android.opengl.Visibility
 import android.os.Build
 import android.os.Handler
 import android.support.design.widget.FloatingActionButton
+import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
+import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.view.menu.MenuBuilder
 import android.support.v7.view.menu.MenuPopupHelper
 import android.support.v7.widget.PopupMenu
@@ -44,7 +47,9 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var dial_pad: LinearLayout? = null
     var isWhite = true
     var my_account: ImageView? = null
-
+//    var navigationView: NavigationView? = null
+//    var drawer: DrawerLayout? = null
+//    private  var toggle: ActionBarDrawerToggle?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,8 +62,12 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         dial_pad = findViewById(R.id.dial_pad)
         grid_view = this.findViewById(R.id.grid_view)
         my_account = findViewById(R.id.my_account)
+//        drawer = findViewById(R.id.drawer_layout)
+//        navigationView =  findViewById(R.id.nav_view)
         dial!!.setOnClickListener(this)
         my_account!!.setOnClickListener(this)
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
         setPage()
         var dialPadAdapter = DialPadAdapter(this@MainHandlingActivity, mThumbIds, dailpadTexts)
         grid_view!!.adapter = dialPadAdapter
@@ -81,6 +90,10 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
         add_contact!!.setOnClickListener(this)
+//        toggle = ActionBarDrawerToggle(this@MainHandlingActivity,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close)
+//        drawer!!.addDrawerListener(toggle!!)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setHomeButtonEnabled(true)
     }
 
 
