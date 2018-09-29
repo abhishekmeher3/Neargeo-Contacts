@@ -26,6 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Main Menu"
+                    android:layout_centerInParent="true"
                     android:fontFamily="@font/century_gothic"
                     android:textColor="@color/white"
                     android:textSize="18dp" />

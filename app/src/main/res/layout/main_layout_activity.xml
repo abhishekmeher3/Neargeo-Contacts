@@ -5,7 +5,12 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/content_main_menu" />
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -154,11 +159,6 @@
     </LinearLayout>
 
 </RelativeLayout>
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/bottom_to_chose"/>
+
 
 </android.support.v4.widget.DrawerLayout>
