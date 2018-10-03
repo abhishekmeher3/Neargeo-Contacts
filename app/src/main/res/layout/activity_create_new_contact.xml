@@ -18,10 +18,11 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                app:theme="@style/AppTheme"
-            android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
+                android:background="@color/colorPrimary"
+                app:theme="@style/AppTheme">
+
                 <ImageView
                     android:id="@+id/back"
                     android:layout_width="wrap_content"
@@ -35,13 +36,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Create New Contact"
                         android:layout_marginLeft="15dp"
+                        android:text="Create New Contact"
                         android:textColor="#ffffff"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/save"
+                        android:layout_marginRight="10dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_save_black_24dp"
+                        android:layout_alignParentRight="true"/>
 
                 </RelativeLayout>
-
 
 
             </android.support.v7.widget.Toolbar>
@@ -53,8 +62,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/toolbar"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="4dp">
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp">
 
                 <ImageView
                     android:id="@+id/add_images"
@@ -74,22 +83,35 @@
                     android:textAlignment="center"
                     android:textColor="#ffffff" />
 
+                <TextView
+                    android:id="@+id/mr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/add_images"
+                    android:singleLine="true"
+                    android:text="Mr"
+                    android:textColor="#3a3b3c"
+                    android:textSize="17dp" />
+
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/input_layout_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginLeft="12dp"
                     android:layout_marginTop="23dp"
+                    android:layout_toRightOf="@+id/mr"
                     android:theme="@style/EditTextHint">
 
                     <EditText
                         android:id="@+id/input_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit_text_line"
                         android:hint="Name"
                         android:singleLine="true"
                         android:text="Abhishek"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColor="#3a3b3c"
                         android:textColorHint="@color/colorPrimary" />
                 </android.support.design.widget.TextInputLayout>
@@ -107,10 +129,10 @@
                         android:id="@+id/get_last_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit_text_line"
                         android:hint="Name"
                         android:singleLine="true"
                         android:text="Abhishek"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColor="#3a3b3c"
                         android:textColorHint="@color/colorPrimary" />
                 </android.support.design.widget.TextInputLayout>
@@ -119,9 +141,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/input_last_name"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="17dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/century_gothic"
                     android:text="Professional Details"
                     android:textColor="@color/text_colour"
@@ -143,18 +165,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
                     android:theme="@style/EditTextHint">
 
                     <EditText
                         android:id="@+id/get_designtions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit_text_line"
                         android:hint="Designation"
                         android:singleLine="true"
                         android:text="Android Developer"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColor="#3a3b3c"
                         android:textColorHint="@color/colorPrimary" />
                 </android.support.design.widget.TextInputLayout>
@@ -165,18 +187,18 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/input_designation"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp"
                     android:theme="@style/EditTextHint">
 
                     <EditText
                         android:id="@+id/get_department"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit_text_line"
                         android:hint="Department"
                         android:singleLine="true"
                         android:textColor="#3a3b3c"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColorHint="@color/colorPrimary" />
                 </android.support.design.widget.TextInputLayout>
 
@@ -185,20 +207,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/input_department"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
                     android:theme="@style/EditTextHint">
 
                     <EditText
                         android:id="@+id/get_company"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit_text_line"
                         android:hint="Company"
                         android:singleLine="true"
                         android:textColor="#3a3b3c"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColorHint="@color/colorPrimary" />
                 </android.support.design.widget.TextInputLayout>
             </RelativeLayout>
@@ -233,11 +255,11 @@
                 android:id="@+id/fab_add_call"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/designations"
-                android:layout_marginBottom="-24dp"
-                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-24dp"
                 android:src="@drawable/ic_add_black_24dp"
                 app:backgroundTint="@color/yellow"
                 app:fabCustomSize="45dp" />
@@ -274,11 +296,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/input_home_phone"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
                     android:drawableRight="@drawable/ic_delete_black"
                     android:singleLine="true"
-                    android:backgroundTint="@color/edit_text_line"
                     android:text="212312313212313213"
                     android:textColor="#3a3b3c" />
 
@@ -309,47 +331,48 @@
                     android:layout_below="@+id/input_personal_phone"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
                     android:drawableRight="@drawable/ic_delete_black"
                     android:hint="+91 65820 51650"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"
-                    android:backgroundTint="@color/edit_text_line"
 
                     android:textColorHint="@color/colorPrimary" />
 
 
+                <TextView
+                    android:id="@+id/input_choose_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_personal_number"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Choose Label"
+                    android:textColor="@color/colorPrimary" />
 
-                    <TextView
-                        android:id="@+id/input_choose_lable"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/get_personal_number"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="7dp"
-                        android:text="Choose Label"
-                        android:textColor="@color/colorPrimary" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/get_personal_number"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_toRightOf="@+id/input_personal_phone"
-                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
-                    <EditText
-                        android:id="@+id/get_choose_lable"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/input_choose_lable"
-                        android:text="Choose Label"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginRight="20dp"
-                        android:backgroundTint="@color/edit_text_line"
-                        android:drawableRight="@drawable/ic_delete_black"
-                        android:singleLine="true"
-                        android:textColor="#3a3b3c" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/get_personal_number"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/input_personal_phone"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                <EditText
+                    android:id="@+id/get_choose_lable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_choose_lable"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:drawableRight="@drawable/ic_delete_black"
+                    android:singleLine="true"
+                    android:text="Choose Label"
+                    android:textColor="#3a3b3c" />
 
 
             </RelativeLayout>
@@ -389,41 +412,40 @@
                 android:background="#f7f7f7">
 
 
+                <TextView
+                    android:id="@+id/input_add_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Personal"
+                    android:textColor="@color/colorPrimary" />
 
-                    <TextView
-                        android:id="@+id/input_add_email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="7dp"
-                        android:text="Personal"
-                        android:textColor="@color/colorPrimary" />
-
-                    <EditText
-                        android:id="@+id/get_email"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="balkanizotov@mail.com"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginRight="20dp"
-                        android:drawableRight="@drawable/ic_delete_black"
-                        android:singleLine="true"
-                        android:textColor="#3a3b3c"
-                        android:backgroundTint="@color/edit_text_line"
-                        android:layout_below="@+id/input_add_email"/>
+                <EditText
+                    android:id="@+id/get_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_add_email"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
+                    android:drawableRight="@drawable/ic_delete_black"
+                    android:singleLine="true"
+                    android:text="balkanizotov@mail.com"
+                    android:textColor="#3a3b3c" />
             </RelativeLayout>
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab_add_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/click_add_phone"
-                android:layout_marginBottom="-24dp"
-                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-24dp"
                 android:src="@drawable/ic_add_black_24dp"
                 app:backgroundTint="@color/yellow"
                 app:fabCustomSize="45dp" />
@@ -460,11 +482,11 @@
                 android:id="@+id/fab_add_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/click_add_email"
-                android:layout_marginBottom="-24dp"
-                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-24dp"
                 android:src="@drawable/ic_add_black_24dp"
                 app:backgroundTint="@color/yellow"
                 app:fabCustomSize="45dp" />
@@ -481,8 +503,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
                     android:text="Home"
                     android:textColor="@color/colorPrimary" />
 
@@ -493,12 +515,12 @@
                     android:layout_below="@+id/home_text"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
                     android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Address line 1"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"
-                    android:backgroundTint="@color/edit_text_line"
                     android:textColorHint="#3a3b3c" />
 
                 <EditText
@@ -507,12 +529,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/get_address_one"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/edit_text_line"
                     android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Address line 2"
-                    android:backgroundTint="@color/edit_text_line"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"
                     android:textColorHint="#3a3b3c" />
@@ -521,10 +543,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/get_address_two"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal"
                     android:weightSum="3">
 
@@ -533,10 +555,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/edit_text_line"
                         android:fontFamily="@font/century_gothic"
                         android:hint="City"
                         android:singleLine="true"
-                        android:backgroundTint="@color/edit_text_line"
                         android:textColor="#3a3b3c"
                         android:textColorHint="#3a3b3c" />
 
@@ -546,9 +568,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/edit_text_line"
                         android:fontFamily="@font/century_gothic"
                         android:hint="State"
-                        android:backgroundTint="@color/edit_text_line"
                         android:singleLine="true"
                         android:textColor="#3a3b3c"
                         android:textColorHint="#3a3b3c" />
@@ -559,9 +581,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/edit_text_line"
                         android:fontFamily="@font/century_gothic"
                         android:hint="Pincode"
-                        android:backgroundTint="@color/edit_text_line"
                         android:singleLine="true"
                         android:textColor="#3a3b3c"
                         android:textColorHint="#3a3b3c" />
@@ -599,11 +621,11 @@
                 android:id="@+id/fab_add_events"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/add_address"
-                android:layout_marginBottom="-24dp"
-                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-24dp"
                 android:src="@drawable/ic_add_black_24dp"
                 app:backgroundTint="@color/yellow"
                 app:fabCustomSize="45dp" />
@@ -621,8 +643,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
                     android:text="Anniversary"
                     android:textColor="@color/colorPrimary" />
 
@@ -633,13 +655,13 @@
                     android:layout_below="@+id/event_text"
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/edit_text_line"
                     android:drawableRight="@drawable/ic_delete_black"
                     android:fontFamily="@font/century_gothic"
                     android:hint="Add Date"
-                    android:layout_marginRight="15dp"
                     android:singleLine="true"
-                    android:backgroundTint="@color/edit_text_line"
                     android:textColor="#3a3b3c"
                     android:textColorHint="#3a3b3c" />
             </RelativeLayout>
@@ -684,11 +706,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
                     android:text="Anniversary"
-                    android:visibility="gone"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
 
                 <EditText
                     android:id="@+id/add_notes_text"
@@ -700,8 +722,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/edit_text_line"
-                    android:fontFamily="@font/century_gothic"
                     android:drawableRight="@drawable/ic_delete_black"
+                    android:fontFamily="@font/century_gothic"
                     android:hint="Add Notes here"
                     android:singleLine="true"
                     android:textColor="#3a3b3c"

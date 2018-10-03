@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/code"
             android:layout_centerVertical="true"
-            android:text="98520 65874"/>
+            android:text="mobile or email id"/>
 
 
 

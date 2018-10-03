@@ -7,8 +7,8 @@
     <string name="company">© 2018 NGC, product of Himaja InfoTech \n Version 3.0   \n Designed and Developed by Divyani Bhuwalka </string>
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
-    <string name="print">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
-    <string name="scan">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
+    <string name="print">Scan your Nearby Geotagged friends to stay in touch always</string>
+    <string name="scan">Add your Nearby Geotagged friends to your contacts list for easy access</string>
     <string name="connect">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
-    <string name="add">If design is about solving problems, it’s the product designer who steers the ship toward finding the best solution for customers.</string>
+    <string name="add">One touch print option available for your Geotagged contacts</string>
 </resources>

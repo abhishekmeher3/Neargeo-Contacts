@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scan"
-        android:textSize="19dp"
+        android:textSize="22dp"
         android:layout_below="@+id/image"
         android:layout_centerHorizontal="true"
         android:textColor="#2c3c56"
@@ -36,10 +36,11 @@
         android:layout_below="@+id/print_text"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:textColor="#2c3c56"
         android:textSize="16dp"
-        android:textStyle="bold"/>
+        android:textStyle="normal"/>
     </RelativeLayout>
 
 </FrameLayout>

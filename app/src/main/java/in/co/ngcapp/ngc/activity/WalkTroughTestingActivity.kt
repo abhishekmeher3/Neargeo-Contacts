@@ -30,9 +30,9 @@ class WalkTroughTestingActivity : AppCompatActivity() {
     var pager: ViewPager? = null
     private var currentPage = 0
     private var NUM_PAGES = 0
-    private val IMAGES = arrayOf<Int>(R.mipmap.print, R.mipmap.scan, R.mipmap.connect, R.mipmap.add)
+    private val IMAGES = arrayOf<Int>(R.mipmap.scan, R.mipmap.add, R.mipmap.connect, R.mipmap.print)
 
-    var textname = arrayOf("Print", "Scan", "Connect", "Add")
+    var textname = arrayOf("Scan", "Add", "Connect", "Add")
     var desc: Array<Int> = arrayOf(R.string.print, R.string.scan, R.string.connect, R.string.add)
 
 
@@ -95,7 +95,7 @@ class WalkTroughTestingActivity : AppCompatActivity() {
                 currentPage = position
                 Log.i("Positions", position.toString())
                 if (currentPage == 3) {
-                    startActivity(Intent(this@WalkTroughTestingActivity, MainHandlingActivity::class.java))
+                    startActivity(Intent(this@WalkTroughTestingActivity, LoginActivity::class.java))
                 }
 
             }
