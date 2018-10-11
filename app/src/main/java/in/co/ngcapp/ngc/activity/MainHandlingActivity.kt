@@ -25,6 +25,7 @@ import android.support.v7.view.menu.MenuBuilder
 import android.support.v7.view.menu.MenuPopupHelper
 import android.support.v7.widget.PopupMenu
 import android.view.ContextThemeWrapper
+import android.view.Gravity
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.TranslateAnimation
@@ -48,7 +49,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var isWhite = true
     var my_account: ImageView? = null
 //    var navigationView: NavigationView? = null
-//    var drawer: DrawerLayout? = null
+    var drawer: DrawerLayout? = null
 //    private  var toggle: ActionBarDrawerToggle?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +63,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         dial_pad = findViewById(R.id.dial_pad)
         grid_view = this.findViewById(R.id.grid_view)
         my_account = findViewById(R.id.my_account)
-//        drawer = findViewById(R.id.drawer_layout)
+        drawer = findViewById(R.id.drawer_layout)
 //        navigationView =  findViewById(R.id.nav_view)
         dial!!.setOnClickListener(this)
         my_account!!.setOnClickListener(this)
@@ -154,7 +155,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
                 menuHelper.show()
             }
             R.id.dial -> openDialPad()
-            R.id.my_account -> startActivity(Intent(this@MainHandlingActivity, MainMenuActivity::class.java))
+            R.id.my_account ->openDrawer(this!!.my_account!!)
 
         }
     }
@@ -213,5 +214,10 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         view.startAnimation(animate)
     }
 
+    fun openDrawer(view :ImageView){
+
+        drawer!!.openDrawer(Gravity.LEFT)
+
+    }
 
 }
