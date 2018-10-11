@@ -19,17 +19,17 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListener{
+class ListFragments : Fragment(), AllFriendsFragment.OnFragmentInteractionListener {
 
     var toolbar: Toolbar? = null
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
-    var fav_contact :TextView?= null
+    var fav_contact: TextView? = null
     var titleTextView: TextView? = null
     var countTextView: TextView? = null
 
-    var titles = arrayOf("Your Contacts", "Your groups", "Your favorites")
-    var counts = arrayOf("265 total contacts", "26 total groups", "5 favorite contacts")
+    var titles = arrayOf("Your Contacts", "Your groups", "Your favorites" ,"Your Miss call","Your All contact")
+    var counts = arrayOf("265 total contacts", "26 total groups", "5 favorite contacts","10 miss call","320 contacts")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -65,20 +65,20 @@ class ListFragments : Fragment()  ,AllFriendsFragment.OnFragmentInteractionListe
         return view
     }
 
-   private  fun setPage() {
+    private fun setPage() {
         tabLayout!!.addTab(tabLayout!!.newTab().setText("All Friend"))
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Groups"))
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Favourites"))
+        tabLayout!!.addTab(tabLayout!!.newTab().setText("Missed Call"))
+        tabLayout!!.addTab(tabLayout!!.newTab().setText("All Call"))
+
+
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
 
     }
 
     override fun onFragmentInteraction(title: String) {
     }
-
-
-
-
 
 
 }

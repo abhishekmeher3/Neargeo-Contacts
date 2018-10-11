@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".fragments.AllFriendsFragment">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            android:layout_toLeftOf="@+id/filter_select"
+            android:background="@drawable/curve_grey_border_background"
+            android:hint="Search Contact, Group, Favourites"
+            android:paddingLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/filter_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="22.5dp"
+            app:srcCompat="@drawable/ic_filter_black" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/all_missed_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/alphabets"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/search"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
