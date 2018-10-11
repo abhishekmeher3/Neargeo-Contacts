@@ -1,12 +1,15 @@
 package `in`.co.ngcapp.ngc.activity
 
 import `in`.co.ngcapp.ngc.R
+import android.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.widget.Toolbar
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 
 class CreateNewContactActivity : AppCompatActivity() {
 
@@ -23,6 +26,7 @@ class CreateNewContactActivity : AppCompatActivity() {
     var email = false
     var address = false
     var event = false
+    var pick_map : TextView?= null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +44,19 @@ class CreateNewContactActivity : AppCompatActivity() {
         fab_add_events = findViewById(R.id.fab_add_events)
         add_address = findViewById(R.id.add_address)
         event_details = findViewById(R.id.event_details)
+        pick_map      = findViewById(R.id.pick_map)
+        var map = findViewById<FrameLayout>(R.id.map)
+        var pick_manually = findViewById<TextView>(R.id.pick_manually)
+        pick_map!!.setOnClickListener{
+            map.visibility = View.VISIBLE
+            pick_manually.visibility = View.VISIBLE
+            pick_map!!.visibility = View.GONE
+        }
+        pick_manually.setOnClickListener {
+            map.visibility = View.GONE
+            pick_manually.visibility = View.GONE
+            pick_map!!.visibility = View.VISIBLE
+        }
         fab_add_call!!.setOnClickListener {
 
             if (i == false) {

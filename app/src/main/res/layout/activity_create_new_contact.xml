@@ -540,6 +540,7 @@
                     android:textColorHint="#3a3b3c" />
 
                 <LinearLayout
+                    android:id="@+id/layout_place"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/get_address_two"
@@ -588,6 +589,35 @@
                         android:textColor="#3a3b3c"
                         android:textColorHint="#3a3b3c" />
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/pick_map"
+                    android:layout_below="@+id/layout_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick map"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="24dp"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/drawable_pick"/>
+                <TextView
+                    android:id="@+id/pick_manually"
+                    android:layout_below="@+id/layout_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Manually"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="24dp"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/drawable_pick"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="187dp"
+                    android:background="#2f2d2d"
+                    android:visibility="gone"
+                    android:id="@+id/map"/>
+
             </RelativeLayout>
 
             <RelativeLayout
