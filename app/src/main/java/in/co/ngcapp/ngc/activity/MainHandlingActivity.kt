@@ -48,9 +48,10 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var dial_pad: LinearLayout? = null
     var isWhite = true
     var my_account: ImageView? = null
-//    var navigationView: NavigationView? = null
+    //    var navigationView: NavigationView? = null
     var drawer: DrawerLayout? = null
-//    private  var toggle: ActionBarDrawerToggle?= null
+    //    private  var toggle: ActionBarDrawerToggle?= null
+    var clicked: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -155,12 +156,13 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
                 menuHelper.show()
             }
             R.id.dial -> openDialPad()
-            R.id.my_account ->openDrawer(this!!.my_account!!)
+            R.id.my_account -> openDrawer(this!!.my_account!!)
 
         }
     }
 
     fun openDialPad() {
+        clicked = 1
 //        var fragmentManger = supportFragmentManager
 //        var dialFragment = DialFragment()
 //        dialFragment.show(fragmentManger,"Show")
@@ -169,21 +171,42 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 //        val startRotateAnimation = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate)
 //        dial!!.startAnimation(startRotateAnimation)
 
-        ObjectAnimator.ofFloat(dial, "rotation", 0f, 360f).setDuration(500).start();
-        var handler = Handler()
-        if (dial_pad!!.visibility == View.GONE)
-            slideUp(dial_pad!!)
-        else slideDown(dial_pad!!)
+        if (clicked == 1) {
+            ObjectAnimator.ofFloat(dial, "rotation", 0f, 360f).setDuration(500).start();
+            var handler = Handler()
+            if (dial_pad!!.visibility == View.GONE)
+                slideUp(dial_pad!!)
+            else slideDown(dial_pad!!)
 
-        handler.postDelayed({
-            if (isWhite) {
-                dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
-                isWhite = false
-            } else {
-                dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))
-                isWhite = true
-            }
-        }, 250)
+            handler.postDelayed({
+                if (isWhite) {
+                    dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))
+                    isWhite = false
+                    clicked = 2
+                } else {
+                    dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
+                    isWhite = true
+                }
+            }, 250)
+
+        } else if (clicked == 2) {
+
+        }
+//        ObjectAnimator.ofFloat(dial, "rotation", 0f, 360f).setDuration(500).start();
+//        var handler = Handler()
+//        if (dial_pad!!.visibility == View.GONE)
+//            slideUp(dial_pad!!)
+//        else slideDown(dial_pad!!)
+//
+//        handler.postDelayed({
+//            if (isWhite) {
+//                dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
+//                isWhite = false
+//            } else {
+//                dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))
+//                isWhite = true
+//            }
+//        }, 250)
 
     }
 
@@ -214,7 +237,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         view.startAnimation(animate)
     }
 
-    fun openDrawer(view :ImageView){
+    fun openDrawer(view: ImageView) {
 
         drawer!!.openDrawer(Gravity.LEFT)
 

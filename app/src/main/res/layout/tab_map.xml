@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
+            android:rotation="352"
             android:layout_toLeftOf="@+id/text"
             app:srcCompat="@drawable/ic_navigation_black_24dp" />
 

@@ -46,6 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/code"
+            android:visibility="gone"
             android:text="+91"
             />
         <EditText
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/code"
             android:layout_centerVertical="true"
-            android:text="mobile or email id"/>
+            android:text="Mobile Number or Email id"/>
 
 
 
@@ -97,7 +98,7 @@
         android:layout_marginRight="15dp"
         android:textColor="#3a3b3c"
         android:textSize="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_alignParentRight="true"/>
 
     <Button
@@ -107,7 +108,7 @@
         android:background="@drawable/yello_drawable"
         android:layout_marginLeft="50dp"
         android:layout_below="@+id/forgot_password"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Sign In"
         android:textColor="#fcfcfc"
         android:textSize="17dp"
