@@ -1,35 +1,31 @@
 package `in`.co.ngcapp.ngc.fragments
 
-
 import `in`.co.ngcapp.ngc.R
 import `in`.co.ngcapp.ngc.adapters.ViewPagerAdapter
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-//the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+class CallLogFragment: Fragment() {
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
-class ListFragments : Fragment(), AllFriendsFragment.OnFragmentInteractionListener {
 
     var toolbar: Toolbar? = null
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
-    var fav_contact: TextView? = null
     var titleTextView: TextView? = null
     var countTextView: TextView? = null
 
-    var titles = arrayOf("Your Contacts", "Your groups", "Your favorites" )
-    var counts = arrayOf("265 total contacts", "26 total groups", "5 favorite contacts")
+    var titles = arrayOf("Your Miss call","Your All Calls")
+    var counts = arrayOf("10 miss call","320 contacts")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -42,7 +38,7 @@ class ListFragments : Fragment(), AllFriendsFragment.OnFragmentInteractionListen
         titleTextView = view.findViewById(R.id.title)
         countTextView = view.findViewById(R.id.count)
 
-        val adapter = ViewPagerAdapter(fragmentManager, tabLayout!!.getTabCount())
+        val adapter = CallLogViewPagerAdapter(childFragmentManager, tabLayout!!.getTabCount())
         viewPager!!.adapter = adapter
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
         tabLayout!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -66,17 +62,37 @@ class ListFragments : Fragment(), AllFriendsFragment.OnFragmentInteractionListen
     }
 
     private fun setPage() {
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("All Friend"))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Groups"))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Favourites"))
+        tabLayout!!.addTab(tabLayout!!.newTab().setText("Missed Call"))
+        tabLayout!!.addTab(tabLayout!!.newTab().setText("All Call"))
 
 
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
 
     }
 
-    override fun onFragmentInteraction(title: String) {
+
+    class CallLogViewPagerAdapter(fm: FragmentManager?, var numTabs: Int) : FragmentStatePagerAdapter(fm) {
+
+        override fun getItem(position: Int): Fragment? {
+            return when (position) {
+                0 -> {
+                    var missedCallFragment = MissedCallFragment()
+                    missedCallFragment
+                }
+                1 -> {
+                    var allCallFragments = AllCallFragments()
+                    allCallFragments
+                }
+                else -> {
+                    null
+                }
+            }
+        }
+
+        override fun getCount(): Int {
+            return this!!.numTabs!!
+        }
+
+
     }
-
-
 }
