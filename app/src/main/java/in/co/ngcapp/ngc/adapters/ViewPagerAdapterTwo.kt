@@ -22,6 +22,10 @@ class ViewPagerAdapterTwo (fm: FragmentManager?, var numTabs :Int ,var mContext:
 
                 return listFragments
             }
+            2 ->{
+               
+                return Fragment()
+            }
             else -> {
                 return null
             }

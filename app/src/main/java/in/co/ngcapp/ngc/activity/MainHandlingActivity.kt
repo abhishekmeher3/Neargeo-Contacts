@@ -102,6 +102,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     fun setPage() {
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_map))
         tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_list))
+        tabs!!.addTab(tabs!!.newTab().setCustomView(R.layout.tab_calllog))
         tabs!!.tabGravity = TabLayout.GRAVITY_FILL
         addTabTint(tabs!!.getTabAt(0)!!)
     }

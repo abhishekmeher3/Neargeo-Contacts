@@ -4,17 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/map_click"
-        android:layout_width="160dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="50dp">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:rotation="352"
@@ -30,6 +31,6 @@
             android:text="Map"
             android:textColor="#3a3b3c"
             android:textSize="16dp" />
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>
