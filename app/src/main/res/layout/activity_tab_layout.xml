@@ -89,7 +89,7 @@
             android:layout_height="match_parent"
             android:background="@android:color/white"
             app:tabIndicatorHeight="2dp"
-            app:tabMode="scrollable"
+            app:tabMode="fixed"
             app:tabIndicatorColor="@color/colorPrimary"
             app:tabSelectedTextColor="#3a3b3c"
             app:tabTextColor="#676767" />

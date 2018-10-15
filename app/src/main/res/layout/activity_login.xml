@@ -113,11 +113,32 @@
         android:textColor="#fcfcfc"
         android:textSize="17dp"
         android:layout_marginRight="15dp"/>
+
+
+    <ImageView
+        android:id="@+id/gmail"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/gmail"
+        android:layout_below="@+id/sign_up"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/facebook"
+        android:layout_toRightOf="@+id/gmail"
+        android:layout_below="@+id/sign_up"
+        android:layout_marginLeft="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New User?"
-        android:layout_below="@+id/sign_up"
+        android:layout_below="@+id/gmail"
         android:layout_marginTop="7dp"
         android:textSize="17dp"
         android:textColor="#3a3b3c"
@@ -128,7 +149,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        android:layout_below="@+id/sign_up"
+        android:layout_below="@+id/gmail"
         android:layout_toRightOf="@+id/new_users"
         android:layout_marginTop="7dp"
         android:textSize="17dp"
