@@ -41,13 +41,14 @@
                         android:textColor="#ffffff"
                         android:textSize="18dp" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/save"
                         android:layout_marginRight="10dp"
                         android:padding="3dp"
-                        android:src="@drawable/ic_save_black_24dp"
+                        android:text="Save"
+                        android:textColor="#ffffff"
                         android:layout_alignParentRight="true"/>
 
                 </RelativeLayout>
@@ -92,6 +93,7 @@
                     android:layout_toRightOf="@+id/add_images"
                     android:singleLine="true"
                     android:text="Mr"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                     android:textColor="#3a3b3c"
                     android:textSize="17dp" />
 
