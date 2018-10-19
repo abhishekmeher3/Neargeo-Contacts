@@ -53,14 +53,14 @@ class MissedCallFragment : Fragment() {
     fun addData() {
         var arrayList = ArrayList<AllFriend>()
 
-        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Trinav", "0.25sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Anil", "0.9sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/09:25", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/09:25", "9861654645", 0))
+        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/  09:25PM", "9861654645", 0))
+        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/  09:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/  09:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Trinav", "0.25sec", "20/12/2018/  09:25PM", "9861654645", 0))
+        arrayList.add(AllFriend("Anil", "0.9sec", "20/12/2018/   01:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/  09:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/  09:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/   09:25AM", "9861654645", 0))
 
 
         var adapter = MissedCallAdapter(this!!.context!!, arrayList, object : clickAllFriends {

@@ -181,11 +181,12 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
             handler.postDelayed({
                 if (isWhite) {
-                    dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))
+                    dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
                     isWhite = false
                     clicked = 2
+
                 } else {
-                    dial!!.setImageDrawable(resources.getDrawable(R.drawable.ic_call_white))
+                    dial!!.setImageDrawable(resources.getDrawable(R.mipmap.dial_pad_copy_3))
                     isWhite = true
                 }
             }, 250)
