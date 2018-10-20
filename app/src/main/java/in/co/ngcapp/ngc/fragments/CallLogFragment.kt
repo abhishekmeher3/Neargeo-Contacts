@@ -24,7 +24,7 @@ class CallLogFragment : Fragment() {
     var titleTextView: TextView? = null
     var countTextView: TextView? = null
 
-    var titles = arrayOf("Call Logs", "Missed Call")
+    var titles = arrayOf("All Logs", "Missed Call")
     var counts = arrayOf("", "")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
