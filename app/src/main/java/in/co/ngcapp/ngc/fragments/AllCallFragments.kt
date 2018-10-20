@@ -3,6 +3,7 @@ package `in`.co.ngcapp.ngc.fragments
 
 import `in`.co.ngcapp.ngc.CustomClick.clickAllFriends
 import `in`.co.ngcapp.ngc.R
+import `in`.co.ngcapp.ngc.adapters.AllContactAdapter
 import `in`.co.ngcapp.ngc.adapters.AlphabetsAdapter
 import `in`.co.ngcapp.ngc.adapters.MissedCallAdapter
 import `in`.co.ngcapp.ngc.model.AllFriend
@@ -49,18 +50,16 @@ class AllCallFragments : Fragment() {
 
     fun addData() {
         var arrayList = ArrayList<AllFriend>()
+        arrayList.add(AllFriend("Abhishek", "yesterday ", " 09:25PM", "Missed Call", 1))
+        arrayList.add(AllFriend("Rithik", "Today", " 09:25AM", "Incoming Call", 0))
+        arrayList.add(AllFriend("Raj", "Thursday", " 09:25AM", "Outgoing Call", 0))
+        arrayList.add(AllFriend("Trinav", "Monday", " 09:25PM", "Incoming Call", 0))
+        arrayList.add(AllFriend("Anil", "Thursday", "   01:25AM", "Outgoing Call", 0))
+        arrayList.add(AllFriend("Abhishek", "Monday", "  09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Rithik", "yesterday", "  09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Raj", "Today", "09:25AM", "Missed Call", 1))
 
-        arrayList.add(AllFriend("Abhishek", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Trinav", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Anil", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Abhishek", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "", "", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "", "", "9861654645", 0))
-
-
-        var adapter = MissedCallAdapter(this!!.context!!, arrayList, object : clickAllFriends {
+        var adapter = AllContactAdapter(this!!.context!!, arrayList, object : clickAllFriends {
             override fun getCount(numbers: Int) {
                 Log.i("GetCounts", numbers.toString())
             }

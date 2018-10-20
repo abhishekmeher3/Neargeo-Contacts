@@ -43,24 +43,24 @@ class MissedCallFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         all_missed_recycler = view.findViewById(R.id.all_missed_recycler)
         alphabets = view.findViewById(R.id.alphabets)
-        all_missed_recycler!!.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
+        all_missed_recycler!!.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false) as RecyclerView.LayoutManager?
         alphabets!!.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
 
         addData()
         getAlphabets()
     }
 
-    fun addData() {
+    private fun addData() {
         var arrayList = ArrayList<AllFriend>()
 
-        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/  09:25PM", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/  09:25AM", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/  09:25AM", "9861654645", 0))
-        arrayList.add(AllFriend("Trinav", "0.25sec", "20/12/2018/  09:25PM", "9861654645", 0))
-        arrayList.add(AllFriend("Anil", "0.9sec", "20/12/2018/   01:25AM", "9861654645", 0))
-        arrayList.add(AllFriend("Abhishek", "0.5sec", "20/12/2018/  09:25AM", "9861654645", 0))
-        arrayList.add(AllFriend("Rithik", "0.11sec", "20/12/2018/  09:25AM", "9861654645", 0))
-        arrayList.add(AllFriend("Raj", "0.15sec", "20/12/2018/   09:25AM", "9861654645", 0))
+        arrayList.add(AllFriend("Abhishek", "yesterday ", " 09:25PM", "Missed Call", 1))
+        arrayList.add(AllFriend("Rithik", "Today", " 09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Raj", "Thursday", " 09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Trinav", "Monday", " 09:25PM", "Missed Call", 1))
+        arrayList.add(AllFriend("Anil", "Thursday", "   01:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Abhishek", "Monday", "  09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Rithik", "yesterday", "  09:25AM", "Missed Call", 1))
+        arrayList.add(AllFriend("Raj", "Today", "  09:25AM", "Missed Call", 1))
 
 
         var adapter = MissedCallAdapter(this!!.context!!, arrayList, object : clickAllFriends {
@@ -73,7 +73,7 @@ class MissedCallFragment : Fragment() {
         adapter.notifyDataSetChanged();
     }
 
-    fun getAlphabets() {
+    private fun getAlphabets() {
         var alphabets1 = ArrayList<AlphabetsData>()
         alphabets1.add(AlphabetsData("A"))
         alphabets1.add(AlphabetsData("B"))

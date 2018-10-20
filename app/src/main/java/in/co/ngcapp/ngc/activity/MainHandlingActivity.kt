@@ -36,6 +36,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
 
     var mThumbIds = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#")
     var dailpadTexts = arrayOf("ABC", "DEF", "EFG", "IJK", "LMN", "OPQ", "RST", "UVW", "XYZ", "", "+", "")
+    var header = arrayOf("Find Contact Near By", "Find Contact Near By", "Call Logs")
 
 
     var toolbar: Toolbar? = null
@@ -52,6 +53,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
     var drawer: DrawerLayout? = null
     //    private  var toggle: ActionBarDrawerToggle?= null
     var clicked: Int? = null
+    var header_title:TextView?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +67,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         grid_view = this.findViewById(R.id.grid_view)
         my_account = findViewById(R.id.my_account)
         drawer = findViewById(R.id.drawer_layout)
+        header_title = findViewById(R.id.header_title)
 //        navigationView =  findViewById(R.id.nav_view)
         dial!!.setOnClickListener(this)
         my_account!!.setOnClickListener(this)
@@ -80,6 +83,7 @@ class MainHandlingActivity : AppCompatActivity(), View.OnClickListener {
         tabs!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager!!.currentItem = tab.position
+                header_title!!.text = header[tab.position]
                 addTabTint(tab)
             }
 

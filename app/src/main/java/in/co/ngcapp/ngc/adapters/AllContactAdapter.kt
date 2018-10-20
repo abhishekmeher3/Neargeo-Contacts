@@ -14,7 +14,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 
 
-class MissedCallAdapter(val mContext: Context, var allfriendArrayList: ArrayList<AllFriend>, var clickAllFriends: clickAllFriends) : RecyclerView.Adapter<MissedCallAdapter.AllFriendClick>() {
+class AllContactAdapter(val mContext: Context, var allfriendArrayList: ArrayList<AllFriend>, var clickAllFriends: clickAllFriends) : RecyclerView.Adapter<AllContactAdapter.AllFriendClick>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllFriendClick {
@@ -41,24 +41,20 @@ class MissedCallAdapter(val mContext: Context, var allfriendArrayList: ArrayList
         var phnumber: TextView? = null
         var fav: ImageView? = null
         var day: TextView? = null
+        var km_icon: ImageView? = null
         var change_colour: RelativeLayout? = null
-        var km_icon:ImageView?= null
-
         fun getData(arrayList: AllFriend, clickAllFriends: clickAllFriends) {
             name = itemView.findViewById(R.id.name)
             profession = itemView.findViewById(R.id.profession)
             phnumber = itemView.findViewById(R.id.phnumber)
             change_colour = itemView.findViewById(R.id.change_colour)
             day = itemView.findViewById(R.id.day)
+            km_icon = itemView.findViewById(R.id.km_icon)
             name!!.text = arrayList.name
             profession!!.text = arrayList.Mprofession
             phnumber!!.text = arrayList.mPhoneNumber
             day!!.text = arrayList.address
-            km_icon = itemView.findViewById(R.id.km_icon)
-
             fav = itemView.findViewById(R.id.fav)
-            km_icon!!.setImageResource(R.drawable.ic_info_outline_black_24dp)
-
             change_colour!!.setOnClickListener {
 
                 //fav!!.visibility = View.VISIBLE
@@ -72,16 +68,21 @@ class MissedCallAdapter(val mContext: Context, var allfriendArrayList: ArrayList
 //                fav!!.visibility = View.VISIBLE
 
 
-
-
                 phnumber!!.setTextColor(Color.parseColor("#97003c"))
                 day!!.setTextColor(Color.parseColor("#97003c"))
+                name!!.setTextColor(Color.parseColor("#97003c"))
+                profession!!.setTextColor(Color.parseColor("#97003c"))
+                km_icon!!.setImageResource(R.drawable.ic_info_outline_black_24dp)
+
 //                change_colour!!.setBackgroundColor(Color.parseColor("#0D97003c"))
             } else {
 //                fav!!.visibility = View.GONE
 //                change_colour!!.setBackgroundColor(Color.parseColor("#ffffff"))
                 phnumber!!.setTextColor(Color.parseColor("#3a3b3c"))
                 day!!.setTextColor(Color.parseColor("#3a3b3c"))
+                name!!.setTextColor(Color.parseColor("#3a3b3c"))
+                profession!!.setTextColor(Color.parseColor("#3a3b3c"))
+                km_icon!!.setImageResource(R.drawable.ic_info_outline_24dp)
 
             }
         }

@@ -1,3 +1,4 @@
+
 package `in`.co.ngcapp.ngc.activity
 
 import `in`.co.ngcapp.ngc.R
@@ -30,7 +31,7 @@ class WalkTroughTestingActivity : AppCompatActivity() {
     var pager: ViewPager? = null
     private var currentPage = 0
     private var NUM_PAGES = 0
-    private val IMAGES = arrayOf<Int>(R.mipmap.scan, R.mipmap.add, R.mipmap.connect, R.mipmap.print)
+    private val IMAGES = arrayOf<Int>(R.mipmap.scan_org, R.mipmap.add_org, R.mipmap.connected_org, R.mipmap.print)
 
     var textname = arrayOf("Scan", "Add", "Connect", "Add")
     var desc: Array<Int> = arrayOf(R.string.print, R.string.scan, R.string.connect, R.string.add)

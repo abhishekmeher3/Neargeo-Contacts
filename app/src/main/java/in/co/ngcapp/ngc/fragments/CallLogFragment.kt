@@ -15,7 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class CallLogFragment: Fragment() {
+class CallLogFragment : Fragment() {
 
 
     var toolbar: Toolbar? = null
@@ -24,15 +24,15 @@ class CallLogFragment: Fragment() {
     var titleTextView: TextView? = null
     var countTextView: TextView? = null
 
-    var titles = arrayOf("","")
-    var counts = arrayOf("","")
+    var titles = arrayOf("Call Logs", "Missed Call")
+    var counts = arrayOf("", "")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view = inflater.inflate(R.layout.activity_tab_layout, container, false)
         toolbar = view.findViewById(R.id.toolbar) as Toolbar
 
-        tabLayout = view.findViewById(R.id.tabs)
+        tabLayout = view!!.findViewById(R.id.tabs)
         setPage()
         viewPager = view.findViewById(R.id.viewpager) as ViewPager
         titleTextView = view.findViewById(R.id.title)
@@ -62,9 +62,8 @@ class CallLogFragment: Fragment() {
     }
 
     private fun setPage() {
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Missed Call"))
         tabLayout!!.addTab(tabLayout!!.newTab().setText("All Call"))
-
+        tabLayout!!.addTab(tabLayout!!.newTab().setText("Missed Call"))
 
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
 
@@ -76,12 +75,13 @@ class CallLogFragment: Fragment() {
         override fun getItem(position: Int): Fragment? {
             return when (position) {
                 0 -> {
-                    var missedCallFragment = MissedCallFragment()
-                    missedCallFragment
-                }
-                1 -> {
                     var allCallFragments = AllCallFragments()
                     allCallFragments
+                }
+
+                1 -> {
+                    var missedCallFragment = MissedCallFragment()
+                    missedCallFragment
                 }
                 else -> {
                     null

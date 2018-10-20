@@ -10,8 +10,8 @@
     <RelativeLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
-        android:background="#ffffff"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffffff">
 
 
         <android.support.v7.widget.RecyclerView
@@ -19,19 +19,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/search"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/alphabets"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:layout_below="@+id/search"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/search"/>
-
-
+            android:background="#ffffff"
+            android:visibility="gone" />
     </RelativeLayout>
-
-
 </FrameLayout>
